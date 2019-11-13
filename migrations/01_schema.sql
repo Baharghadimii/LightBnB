@@ -56,11 +56,11 @@ CREATE TABLE property_reviews
   rating SMALLINT NOT NULL DEFAULT 0,
   message TEXT
 );
-CREATE TABLE rate
+CREATE TABLE rates
 (
   id SERIAL PRIMARY KEY,
   property_id INTEGER NOT NULL REFERENCES properties(id) ON DELETE CASCADE,
   start_date TIMESTAMP,
   end_date TIMESTAMP,
-  cost_per_night DECIMAL(5,2) NOT NULL
+  cost_per_night INTEGER NOT NULL DEFAULT 0
 );
