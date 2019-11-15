@@ -49,11 +49,7 @@ VALUES
 INSERT INTO properties
   (owner_id, title, description, thumbnail_photo_url, cover_photo_url, cost_per_night, parking_spaces, number_of_bathrooms, number_of_bedrooms, country, street, city, province, post_code, active)
 VALUES
-  (1, 'Speed lamp', 'description', 'https://images.pexels.com/photos/2086676.jpeg?auto=copress&cs=tinysrgb&h=350', 'https://images.pexels.com/photos/2086676/pexels-photo-2121121.jpeg', 85223, 6, 6, 7, 'Canada', '651 Nami Road', 'Sotboske', 'Quebec', 28143, true);
-INSERT INTO properties
-  (owner_id, title, description, thumbnail_photo_url, cover_photo_url, cost_per_night, parking_spaces, number_of_bathrooms, number_of_bedrooms, country, street, city, province, post_code, active)
-VALUES
-  (1, 'Blank corner', 'description', 'https://images.pexels.com/photos/2076970.jpeg?auto=copress&cs=tinysrgb&h=350', 'https://images.pexels.com/photos/2076970/pexels-photo-4974320.jpeg', 46058, 0, 5, 6, 'Canada', '1650 Hejto Center', 'Genvezuj', 'Alberta', 87653, true);
+  (1, 'Blank corner', 'description', 'https://images.pexels.com/photos/2102584/pexels-photo-2102584.jpeg', 'https://images.pexels.com/photos/2076970/pexels-photo-4974320.jpeg', 46058, 0, 5, 6, 'Canada', '1650 Hejto Center', 'Genvezuj', 'Alberta', 87653, true);
 INSERT INTO properties
   (owner_id, title, description, thumbnail_photo_url, cover_photo_url, cost_per_night, parking_spaces, number_of_bathrooms, number_of_bedrooms, country, street, city, province, post_code, active)
 VALUES
