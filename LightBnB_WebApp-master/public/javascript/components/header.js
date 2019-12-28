@@ -1,4 +1,3 @@
-/* eslint-disable semi */
 $(() => {
   window.header = {};
 
@@ -19,7 +18,7 @@ $(() => {
           <li class="sign-up_button">Sign Up</li>
         </ul>
       </nav>
-      `
+      `;
     } else {
       userLinks = `
       <nav id="page-header__user-links" class="page-header__user-links">
@@ -33,7 +32,7 @@ $(() => {
           <li class="logout_button">Log Out</li>
         </ul>
       </nav>
-      `
+      `;
     }
 
     $pageHeader.append(userLinks);

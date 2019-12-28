@@ -56,11 +56,14 @@ CREATE TABLE property_reviews
   rating SMALLINT NOT NULL DEFAULT 0,
   message TEXT
 );
-CREATE TABLE rates
+
+DROP TABLE IF EXISTS guest_reviews;
+CREATE TABLE guest_reviews
 (
   id SERIAL PRIMARY KEY,
-  property_id INTEGER NOT NULL REFERENCES properties(id) ON DELETE CASCADE,
-  start_date TIMESTAMP,
-  end_date TIMESTAMP,
-  cost_per_night INTEGER NOT NULL DEFAULT 0
+  guest_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  owner_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  reservation_id INTEGER NOT NULL REFERENCES reservations(id) ON DELETE CASCADE,
+  rating SMALLINT,
+  message VARCHAR(255)
 );

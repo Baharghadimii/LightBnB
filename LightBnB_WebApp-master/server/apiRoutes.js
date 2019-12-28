@@ -1,8 +1,8 @@
-/* eslint-disable indent */
+/* eslint-disable camelcase */
 module.exports = function (router, database) {
-
-  router.get('/properties', (req, res) => {
-    database.getAllProperties(req.query, 20)
+  router.get("/properties", (req, res) => {
+    database
+      .getAllProperties(req.query, 20)
       .then(properties => res.send({ properties }))
       .catch(e => {
         console.error(e);
@@ -10,13 +10,14 @@ module.exports = function (router, database) {
       });
   });
 
-  router.get('/reservations', (req, res) => {
+  router.get("/reservations", (req, res) => {
     const userId = req.session.userId;
     if (!userId) {
       res.error("💩");
       return;
     }
-    database.getAllReservations(userId)
+    database
+      .getAllReservations(userId)
       .then(reservations => res.send({ reservations }))
       .catch(e => {
         console.error(e);
@@ -24,9 +25,10 @@ module.exports = function (router, database) {
       });
   });
 
-  router.post('/properties', (req, res) => {
+  router.post("/properties", (req, res) => {
     const userId = req.session.userId;
-    database.addProperty({ ...req.body, owner_id: userId })
+    database
+      .addProperty({ ...req.body, owner_id: userId })
       .then(property => {
         res.send(property);
       })
@@ -37,4 +39,4 @@ module.exports = function (router, database) {
   });
 
   return router;
-}
+};
